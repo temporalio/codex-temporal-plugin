@@ -8,13 +8,19 @@ This repository provides an [OpenAI Codex plugin](https://developers.openai.com/
 
 ## Installation
 
-Add the marketplace to your Codex environment:
+### Repo-scoped (recommended)
 
-```
-.agents/plugins/marketplace.json
+Clone this repo into your project and Codex will discover the plugin via the marketplace file at `.agents/plugins/marketplace.json`:
+
+```bash
+git clone https://github.com/temporalio/codex-temporal-plugin.git
 ```
 
-Or reference this repository directly when configuring Codex plugins.
+Restart Codex, open the plugin directory, and install **Temporal Developer** from the marketplace.
+
+### Personal
+
+To install for all projects, copy the plugin to `~/.codex/plugins/` and add an entry to `~/.agents/plugins/marketplace.json`.
 
 ## What's Included
 
