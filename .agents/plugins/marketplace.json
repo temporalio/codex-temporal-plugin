@@ -8,7 +8,7 @@
       "name": "temporal-developer",
       "source": {
         "source": "local",
-        "path": "../.."
+        "path": "./plugins/temporal-developer"
       },
       "policy": {
         "installation": "AVAILABLE",
