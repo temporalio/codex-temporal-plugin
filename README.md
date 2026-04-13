@@ -8,11 +8,17 @@ This repository provides an [OpenAI Codex plugin](https://developers.openai.com/
 
 ## Installation
 
-Install this plugin in Codex by adding the marketplace or referencing this repository directly.
+Add the marketplace to your Codex environment:
+
+```
+.agents/plugins/marketplace.json
+```
+
+Or reference this repository directly when configuring Codex plugins.
 
 ## What's Included
 
-- **temporal-developer** skill — Comprehensive guidance for developing Temporal applications: creating workflows, activities, and workers; handling signals, queries, and updates; debugging non-determinism errors; implementing saga patterns, versioning strategies, and testing approaches across Python, TypeScript, and Go SDKs.
+- **temporal-developer** skill — Comprehensive guidance for developing Temporal applications: creating workflows, activities, and workers; handling signals, queries, and updates; debugging non-determinism errors; implementing saga patterns, versioning strategies, and testing approaches across Python, TypeScript, Go, and Java SDKs.
 
 ## Standalone Skill
 
