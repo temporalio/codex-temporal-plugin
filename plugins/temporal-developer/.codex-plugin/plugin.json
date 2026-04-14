@@ -30,6 +30,8 @@
     "capabilities": [],
     "websiteURL": "https://temporal.io/",
     "defaultPrompt": ["Create a workflow using Temporal."],
+    "composerIcon": "./assets/temporal-logo.svg",
+    "logo": "./assets/temporal-logo.svg",
     "screenshots": []
   }
 }
