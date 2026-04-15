@@ -1,7 +1,7 @@
 {
-  "name": "temporal-developer",
+  "name": "temporal",
   "version": "0.2.0",
-  "description": "Comprehensive skill for developing Temporal applications across Python, TypeScript, Go, and Java.",
+  "description": "Comprehensive skill for the entire Temporal lifecycle — developing applications, using the Temporal CLI, running and managing Temporal Server, and working with Temporal Cloud.",
   "author": {
     "name": "Temporal",
     "url": "https://temporal.io/"
@@ -22,9 +22,9 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Temporal Developer",
-    "shortDescription": "Build reliable Temporal workflows, activities, and workers in Python, TypeScript, Go, and Java",
-    "longDescription": "Comprehensive guidance for developing Temporal applications — creating workflows, activities, and workers; handling signals, queries, and updates; debugging non-determinism errors; implementing saga patterns, versioning strategies, and testing approaches across Python, TypeScript, Go, and Java SDKs.",
+    "displayName": "Temporal",
+    "shortDescription": "Develop, run, and manage Temporal applications across the entire platform lifecycle",
+    "longDescription": "Comprehensive guidance for working with Temporal — developing workflows, activities, and workers across Python, TypeScript, Go, and Java SDKs; using the Temporal CLI for local development and operations; running and managing self-hosted Temporal Server; and working with Temporal Cloud for production deployments.",
     "developerName": "Temporal",
     "category": "Coding",
     "capabilities": [],

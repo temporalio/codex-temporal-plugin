@@ -1,6 +1,6 @@
-# Temporal Developer Plugin for OpenAI Codex
+# Temporal Plugin for OpenAI Codex
 
-This repository provides an [OpenAI Codex plugin](https://developers.openai.com/codex/plugins/build) for developing [Temporal](https://temporal.io/) applications.
+This repository provides an [OpenAI Codex plugin](https://developers.openai.com/codex/plugins/build) for working with [Temporal](https://temporal.io/) — developing applications, using the CLI, managing server, and working with Temporal Cloud.
 
 > [!WARNING]
 > This plugin is in Public Preview, and will continue to evolve and improve.
@@ -40,7 +40,7 @@ Add the plugin to an existing project so everyone on the repo gets access:
    rm -rf codex-temporal-plugin
    ```
 
-4. Restart Codex and open the plugin directory. In the marketplace dropdown, switch from **OpenAI** to **Temporal Developer**, then click the **+** button to install the plugin.
+4. Restart Codex and open the plugin directory. In the marketplace dropdown, switch from **OpenAI** to **Temporal**, then click the **+** button to install the plugin.
 
 
 ## What's Included
