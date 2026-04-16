@@ -32,6 +32,8 @@
     "defaultPrompt": ["Create a workflow using Temporal."],
     "composerIcon": "./assets/temporal-logo.svg",
     "logo": "./assets/temporal-logo.svg",
-    "screenshots": []
+    "screenshots": [],
+    "privacyPolicyURL": "https://temporal.io/global-privacy-policy",
+    "termsOfServiceURL": "https://temporal.io/terms-of-service"
   }
 }
