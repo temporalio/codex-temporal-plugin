@@ -22,7 +22,7 @@ The Temporal plugin is published in the Codex plugin marketplace.
 
 1. Run `/plugins`.
 2. Search for **temporal**.
-3. Mark it for installation.
+3. Select "Install plugin"
 
 Restart Codex after installing.
 
