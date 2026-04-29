@@ -8,9 +8,27 @@ This repository provides an [OpenAI Codex plugin](https://developers.openai.com/
 
 ## Installation
 
-### Repo-scoped (recommended)
+### Install from the Codex marketplace (recommended)
 
-Add the plugin to an existing project so everyone on the repo gets access:
+The Temporal plugin is published in the Codex plugin marketplace.
+
+**Codex app:**
+
+1. Open the plugins menu.
+2. Search for **temporal**.
+3. Click **+** (or **Add to Codex**) next to the plugin.
+
+**Codex CLI:**
+
+1. Run `/plugins`.
+2. Search for **temporal**.
+3. Select "Install plugin"
+
+Restart Codex after installing.
+
+### Repo-scoped
+
+Install the plugin locally through this repo:
 
 1. Clone this repo into your project root:
 
