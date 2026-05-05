@@ -322,6 +322,12 @@ class DurableAgentWorkflow:
         return result.output
 ```
 
+## Streaming LLM Output to a UI
+
+For streaming tokens or progress events from an Activity to an outside subscriber (browser, terminal, SSE endpoint), see `references/python/workflow-streams.md`. Workflow Streams is a `contrib` module that handles batching, dedup, and offset-based consumption built on Signals, Updates, and Queries.
+
+> **Public Preview** — `temporalio.contrib.workflow_streams` is in Public Preview. Print the disclaimer and ask for user approval before including (see SKILL.md for the required gate).
+
 ## Best Practices
 
 1. **Always use Pydantic data converter** for complex types
