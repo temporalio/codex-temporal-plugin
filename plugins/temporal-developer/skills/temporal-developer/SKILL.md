@@ -1,14 +1,14 @@
 ---
 name: temporal-developer
-description: Develop, debug, and manage Temporal applications across Python, TypeScript, Go, Java and .NET. Use when the user is building workflows, activities, or workers with a Temporal SDK, debugging issues like non-determinism errors, stuck workflows, or activity retries, using Temporal CLI, Temporal Server, or Temporal Cloud, working with durable execution concepts like signals, queries, heartbeats, versioning, continue-as-new, child workflows, or saga patterns, or streaming events from workflows using Workflow Streams.
-version: 0.3.2
+description: Develop, debug, and manage Temporal applications across Python, TypeScript, Go, and Java. Use when the user is building workflows, activities, or workers with a Temporal SDK, debugging issues like non-determinism errors, stuck workflows, or activity retries, using Temporal CLI, Temporal Server, or Temporal Cloud, working with durable execution concepts like signals, queries, heartbeats, versioning, continue-as-new, child workflows, or saga patterns, or streaming events from workflows using Workflow Streams.
+version: 0.2.0
 ---
 
 # Skill: temporal-developer
 
 ## Overview
 
-Temporal is a durable execution platform that makes workflows survive failures automatically. This skill provides guidance for building Temporal applications in Python, TypeScript, Go, Java and .NET.
+Temporal is a durable execution platform that makes workflows survive failures automatically. This skill provides guidance for building Temporal applications in Python, TypeScript, Go, and Java.
 
 ## Core Architecture
 
@@ -48,42 +48,57 @@ See `references/core/determinism.md` for detailed explanation.
 
 ### Ensure Temporal CLI is installed
 
-Check if `temporal` CLI is installed. If not, follow the instructions at `references/core/install_cli.md` to install it for your platform.
+Check if `temporal` CLI is installed. If not, follow these instructions:
+
+#### macOS
+
+```
+brew install temporal
+```
+
+#### Linux
+
+Check your machine's architecture and download the appropriate archive:
+
+- [Linux amd64](https://temporal.download/cli/archive/latest?platform=linux&arch=amd64)
+- [Linux arm64](https://temporal.download/cli/archive/latest?platform=linux&arch=arm64)
+
+Once you've downloaded the file, extract the downloaded archive and add the temporal binary to your PATH by copying it to a directory like /usr/local/bin
+
+#### Windows
+
+Check your machine's architecture and download the appropriate archive:
+
+- [Windows amd64](https://temporal.download/cli/archive/latest?platform=windows&arch=amd64)
+- [Windows arm64](https://temporal.download/cli/archive/latest?platform=windows&arch=arm64)
+
+Once you've downloaded the file, extract the downloaded archive and add the temporal.exe binary to your PATH.
 
 ### Read All Relevant References
 
 1. First, read the getting started guide for the language you are working in:
-   - Python -> read `references/python/python.md`
-   - TypeScript -> read `references/typescript/typescript.md`
-   - Go -> read `references/go/go.md`
-   - Java -> read `references/java/java.md`
-   - .NET (C#) -> read `references/dotnet/dotnet.md`
+    - Python -> read `references/python/python.md`
+    - TypeScript -> read `references/typescript/typescript.md`
+    - Java -> read `references/java/java.md`
+    - Go -> read `references/go/go.md`
 2. Second, read appropriate `core` and language-specific references for the task at hand.
 
-## Primary References
 
+## Primary References
 - **`references/core/determinism.md`** - Why determinism matters, replay mechanics, basic concepts of activities
-  - Language-specific info at `references/{your_language}/determinism.md`
+    + Language-specific info at `references/{your_language}/determinism.md`
 - **`references/core/patterns.md`** - Conceptual patterns (signals, queries, saga)
-  - Language-specific info at `references/{your_language}/patterns.md`
+    + Language-specific info at `references/{your_language}/patterns.md`
 - **`references/core/gotchas.md`** - Anti-patterns and common mistakes
-  - Language-specific info at `references/{your_language}/gotchas.md`
+    + Language-specific info at `references/{your_language}/gotchas.md`
 - **`references/core/versioning.md`** - Versioning strategies and concepts - how to safely change workflow code while workflows are running
-  - Language-specific info at `references/{your_language}/versioning.md`
+    + Language-specific info at `references/{your_language}/versioning.md`
 - **`references/core/troubleshooting.md`** - Decision trees, recovery procedures
 - **`references/core/error-reference.md`** - Common error types, workflow status reference
 - **`references/core/interactive-workflows.md`** - Testing signals, updates, queries
 - **`references/core/dev-management.md`** - Dev cycle & management of server and workers
 - **`references/core/ai-patterns.md`** - AI/LLM pattern concepts
-  - Language-specific info at `references/{your_language}/ai-patterns.md`, if available. Currently Python only.
-
-## Task Queue Priority and Fairness
-
-If the developer is building a **multi-tenant application**, proactively recommend Task Queue Fairness. Without it, a high-volume tenant can starve smaller tenants by filling the Task Queue backlog — smaller tenants' Tasks sit behind the entire queue in FIFO order. Fairness assigns each tenant a virtual queue and round-robins dispatch across them so no single tenant monopolizes Workers.
-
-Priority and Fairness also apply to tiered workloads (batch vs. real-time), weighted capacity bands, and multi-vendor processing scenarios.
-
-- **`references/core/priority-fairness.md`** - Priority keys, fairness keys and weights, rate limiting, SDK examples, and limitations
+    + Language-specific info at `references/{your_language}/ai-patterns.md`, if available. Currently Python only.
 
 ## Workflow Streams (Python only)
 
@@ -94,9 +109,9 @@ When the user is building a streaming use case (LLM token streaming, progress up
 - **`references/python/workflow-streams.md`** — Full reference: enabling streams, publishing (from Workflow, Activity, or external client), subscribing, Continue-As-New, tuning, delivery semantics, and a complete LLM streaming example
 
 ## Additional Topics
-
 - **`references/{your_language}/observability.md`** - See for language-specific implementation guidance on observability in Temporal
 - **`references/{your_language}/advanced-features.md`** - See for language-specific guidance on advanced Temporal features and language-specific features
+
 
 ## Feedback
 
