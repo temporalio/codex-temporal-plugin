@@ -236,7 +236,9 @@ Skip this section for short-lived Workflows (single chat completion, order pipel
 
 Subscribers automatically follow Continue-As-New chains — the Workflow ID is stable, so the iterator fetches a fresh handle and continues polling from the carried offset. <!-- docs/develop/python/workflows/workflow-streams.mdx:303 -->
 
-Carry both application state and stream state across the boundary. Add a `WorkflowStreamState | None` field to your Workflow input (the `| None` is required — with `Any`, the data converter rebuilds the field as a plain `dict` and `WorkflowStream(prior_state=...)` raises `AttributeError`): <!-- docs/develop/python/workflows/workflow-streams.mdx:305,347 -->
+To roll a long-running streaming Workflow over without subscribers seeing a gap, carry both your application state and the stream state across the boundary. Add a `WorkflowStreamState | None` field to your Workflow input, pass it to the constructor, and call `WorkflowStream.continue_as_new(build_args)` to invoke the rollover. The helper drains waiting subscribers, waits for in-flight handlers to finish, then calls `workflow.continue_as_new` with the args produced by `build_args(post_drain_state)`: <!-- docs/develop/python/workflows/workflow-streams.mdx:305-306 -->
+
+The `| None` on the `stream_state` field type is required: `prior_state` is `None` on a fresh start and a `WorkflowStreamState` instance after a rollover. Always use the concrete type, not `Any`. With `Any`, the data converter rebuilds the field as a plain `dict` and `WorkflowStream(prior_state=...)` raises `AttributeError` accessing `.log` / `.base_offset` / `.publishers` on the dict. <!-- docs/develop/python/workflows/workflow-streams.mdx:347 -->
 
 ```python
 from dataclasses import dataclass, field
