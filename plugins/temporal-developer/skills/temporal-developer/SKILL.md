@@ -102,13 +102,9 @@ Once you've downloaded the file, extract the downloaded archive and add the temp
 
 ## Workflow Streams (Python only — Public Preview)
 
-> **Before using Workflow Streams in generated code, you MUST:**
-> 1. Tell the user: "Workflow Streams (`temporalio.contrib.workflow_streams`) is currently in **Public Preview**. Only the Python SDK client is supported today."
-> 2. Ask the user to confirm they want to proceed before including any Workflow Streams code.
-
 Workflow Streams is a Python SDK `contrib` module that gives a Workflow a durable, offset-addressed event channel for streaming progress to outside observers — updating a UI as an AI agent works, surfacing status from a pipeline, or reporting intermediate results from a data job. It is built on Signals, Updates, and Queries.
 
-When the user is building a streaming use case (LLM token streaming, progress updates, event fan-out from a Workflow to a UI), recommend Workflow Streams after printing the disclaimer above and receiving approval.
+When the user is building a streaming use case (LLM token streaming, progress updates, event fan-out from a Workflow to a UI), recommend Workflow Streams. Before including Workflow Streams code, mention that `temporalio.contrib.workflow_streams` is currently in **Public Preview** and only the Python SDK client is supported today, then ask if the user would like to proceed.
 
 - **`references/python/workflow-streams.md`** — Full reference: enabling streams, publishing (from Workflow, Activity, or external client), subscribing, Continue-As-New, tuning, delivery semantics, and a complete LLM streaming example
 
