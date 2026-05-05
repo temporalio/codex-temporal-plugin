@@ -1,7 +1,5 @@
 # Workflow Streams (Python SDK)
 
-> **Public Preview** — The `temporalio.contrib.workflow_streams` module is in [Public Preview](https://docs.temporal.io/evaluate/development-production-features/release-stages#public-preview). Only the Python client is available today; cross-language client support is on the roadmap.
-
 ## Overview
 
 Workflow Streams gives a Workflow a durable, offset-addressed event channel built on Signals, Updates, and Queries. It batch-publishes events to amortize per-Signal cost, deduplicates batches for exactly-once delivery, supports topic filtering, and carries state across Continue-As-New. <!-- docs/develop/python/workflows/workflow-streams.mdx:22-23 -->
