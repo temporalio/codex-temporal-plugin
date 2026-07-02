@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing to the Temporal Developer skill!
+Thanks for your interest in contributing to the Temporal plugin!
 
 ## Where to make changes
 
