@@ -1,14 +1,14 @@
 {
   "name": "temporal-marketplace",
   "interface": {
-    "displayName": "Temporal Developer"
+    "displayName": "Temporal"
   },
   "plugins": [
     {
-      "name": "temporal-developer",
+      "name": "temporal",
       "source": {
         "source": "local",
-        "path": "./plugins/temporal-developer"
+        "path": "./plugins/temporal"
       },
       "policy": {
         "installation": "AVAILABLE",

@@ -44,13 +44,13 @@ Install the plugin locally through this repo:
    mkdir -p .agents/plugins plugins
 
    # Copy the plugin
-   cp -r codex-temporal-plugin/plugins/temporal-developer plugins/
+   cp -r codex-temporal-plugin/plugins/temporal plugins/
 
    # Copy the marketplace catalog
    cp codex-temporal-plugin/.agents/plugins/marketplace.json .agents/plugins/
    ```
 
-   > If you already have a `.agents/plugins/marketplace.json`, merge the `temporal-developer` entry from the one in this repo into your existing file's `plugins` array.
+   > If you already have a `.agents/plugins/marketplace.json`, merge the `temporal` entry from the one in this repo into your existing file's `plugins` array.
 
 3. Optionally, remove the cloned repo:
 
