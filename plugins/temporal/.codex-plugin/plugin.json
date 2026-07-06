@@ -1,6 +1,6 @@
 {
   "name": "temporal",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Comprehensive skill for the entire Temporal lifecycle — developing applications, using the Temporal CLI, running and managing Temporal Server, and working with Temporal Cloud.",
   "author": {
     "name": "Temporal",
@@ -29,7 +29,9 @@
     "category": "Coding",
     "capabilities": [],
     "websiteURL": "https://temporal.io/",
-    "defaultPrompt": ["Create a workflow using Temporal."],
+    "defaultPrompt": [
+      "Create a workflow using Temporal."
+    ],
     "composerIcon": "./assets/temporal-logo.svg",
     "logo": "./assets/temporal-logo.svg",
     "screenshots": [],
