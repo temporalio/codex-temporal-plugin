@@ -23,12 +23,13 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Temporal",
-    "shortDescription": "Develop, run, and manage Temporal applications across the entire platform lifecycle",
+    "shortDescription": "Develop with Temporal",
     "longDescription": "Comprehensive guidance for working with Temporal — developing workflows, activities, and workers across Python, TypeScript, Go, and Java SDKs; using the Temporal CLI for local development and operations; running and managing self-hosted Temporal Server; and working with Temporal Cloud for production deployments.",
     "developerName": "Temporal",
     "category": "Developer Tools",
     "capabilities": [],
     "websiteURL": "https://temporal.io/",
+    "supportURL": "https://support.temporal.io/",
     "defaultPrompt": [
       "Create a workflow using Temporal."
     ],
