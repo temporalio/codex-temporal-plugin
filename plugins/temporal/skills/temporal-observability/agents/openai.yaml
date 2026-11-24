@@ -1,0 +1,3 @@
+interface:
+  display_name: "Temporal Observability"
+  short_description: "Collect, query, dashboard, and alert on Temporal metrics"
